@@ -7,7 +7,12 @@ body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
 }
+
 #loginButton {
     padding: 10px 20px;
     font-size: 18px;
+}
+
+.container {
+    text-align: center;
 }
