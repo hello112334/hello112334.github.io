@@ -1,18 +1,32 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
 }
 
 #loginButton {
-    padding: 10px 20px;
-    font-size: 18px;
+  padding: 10px 20px;
+  font-size: 18px;
 }
 
 .container {
-    text-align: center;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.fbcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fbLoginButton {
+  padding: 10px 20px;
+  font-size: 18px;
 }

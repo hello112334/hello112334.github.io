@@ -74,6 +74,12 @@ document.getElementById("loginButton").addEventListener("click", function () {
   });
 });
 
+function checkLoginState() {
+  FB.getLoginStatus(function (response) {
+    statusChangeCallback(response);
+  });
+}
+
 // Initialize the Facebook SDK
 window.onload = function () {
   FB.init({

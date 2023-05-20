@@ -25,17 +25,43 @@
   </head>
   <body>
     <div id="fb-root"></div>
-    <script
-      async
-      defer
-      crossorigin="anonymous"
-      src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v16.0&appId=621474459906899&autoLogAppEvents=1"
-      nonce="YIefeJ9c"
-    ></script>
+
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "621474459906899",
+          cookie: true,
+          xfbml: true,
+          version: "v16.0",
+        });
+
+        FB.AppEvents.logPageView();
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
 
     <div class="container">
       <h2>Login</h2>
       <button id="loginButton" class="button">Login with Facebook</button>
+      <div class="fbcontainer">
+        <fb:login-button
+        id="fbLoginButton"
+          scope="public_profile,email"
+          onlogin="checkLoginState();"
+        >
+        </fb:login-button>
+      </div>
     </div>
     <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.813.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/amazon-cognito-identity-js/4.5.9/amazon-cognito-identity.min.js"></script> -->
