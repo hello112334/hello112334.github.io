@@ -39,6 +39,7 @@ document.getElementById("loginButton").addEventListener("click", function () {
 
   FB.getLoginStatus(function (response) {
     if (response.status === "connected") {
+      console.log("User is logged in");
       var accessToken = response.authResponse.accessToken;
       var expiresAt = response.authResponse.expiresIn;
       var idToken = new AmazonCognitoIdentity.CognitoIdToken({
@@ -63,6 +64,7 @@ document.getElementById("loginButton").addEventListener("click", function () {
       cognitoUser.setSignInUserSession(session);
       console.log("User is logged in");
     } else {
+      console.log("User is not logged in");
       FB.login(function (response) {
         if (response.authResponse) {
           console.log("User has successfully logged in");
