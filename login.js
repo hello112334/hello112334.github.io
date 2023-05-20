@@ -80,6 +80,6 @@ window.onload = function () {
     appId: "621474459906899",
     cookie: true,
     xfbml: true,
-    version: "v15.0",
+    version: "v16.0",
   });
 };
