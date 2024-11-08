@@ -1,70 +1,33 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="dist/aws-sdk.js"></script>
-    <script src="dist/aws-sdk.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <title>Cognito and instagram test</title>
-  </head>
-  <body>
-    <button id="loginButton">Login with Facebook</button>
-
-    <script src="login.js"></script>
-  </body>
-</html> -->
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Congnito with Facebook</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="dist/aws-sdk.js"></script>
-    <script src="dist/aws-sdk.min.js"></script>
-  </head>
-  <body>
-    <div id="fb-root"></div>
-
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          appId: "621474459906899",
-          cookie: true,
-          xfbml: true,
-          version: "v16.0",
-        });
-
-        FB.AppEvents.logPageView();
-      };
-
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-          return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, "script", "facebook-jssdk");
-    </script>
-
-    <div class="container">
-      <h2>Login</h2>
-      <button id="loginButton" class="button">Login with Facebook</button>
-      <div class="fbcontainer">
-        <fb:login-button
-        id="fbLoginButton"
-          scope="public_profile,email"
-          onlogin="checkLoginState();"
-        >
-        </fb:login-button>
-      </div>
-    </div>
-    <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.813.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/amazon-cognito-identity-js/4.5.9/amazon-cognito-identity.min.js"></script> -->
-    <script src="login.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Fashion World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      text-align: center;
+    }
+    .welcome-message {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p class="welcome-message">Welcome!</p>
+  </div>
+</body>
 </html>
